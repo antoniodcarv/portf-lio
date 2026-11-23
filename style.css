@@ -1,0 +1,53 @@
+:root{
+  --red:#d93a2e;
+  --ink:#000;
+  --muted:#555;
+  --box:#eef1f5;
+  --bar:#f4f4f4;
+  --line:#c9c9c9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;font-size:18px;line-height:1.1}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+
+.nav{position:sticky;top:0;z-index:10;display:grid;grid-template-columns:110px 1fr auto 1fr;align-items:center;height:40px;padding:0 20px;background:var(--bar);border-bottom:1px solid var(--line);font-size:15px}
+.logo{display:flex}
+.logo img{width:30px;height:30px;display:block}
+.nav-link{justify-self:center}
+.about{justify-self:end}
+
+.hero{position:relative;padding:70px 22px 0;min-height:440px}
+h1{position:relative;z-index:2;font-weight:400;color:var(--red);font-size:clamp(40px,6.4vw,82px);line-height:.98;letter-spacing:-.01em}
+.cavalos{position:absolute;left:360px;top:236px;width:516px;max-width:60vw;z-index:1}
+
+.info{display:grid;grid-template-columns:217px 332px 304px 1fr;gap:0 95px;padding:0 20px;margin-top:20px;align-items:start}
+.info>div{min-width:0}
+.info p{line-height:1.2}
+.box{background:var(--box);border-radius:6px;padding:12px 15px 14px}
+.box ul{list-style:none;margin-top:18px}
+.box li{line-height:1.05}
+.gap{margin-top:36px;margin-bottom:10px}
+.info div:not(.box) p+p{margin-top:10px}
+
+.projetos{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:start;padding:130px 40px 80px}
+.card{display:block;text-decoration:none}
+.card img{display:block;width:100%;height:auto}
+.card small{display:block;margin-top:10px;font-size:11px;color:var(--muted);line-height:1.3}
+.card h2{font-weight:400;font-size:16px;margin-top:4px}
+.card:hover h2{text-decoration:underline}
+
+@media (max-width:1100px){
+  .info{grid-template-columns:repeat(2,1fr);gap:30px}
+  .projetos{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:700px){
+  .nav{grid-template-columns:auto 1fr auto;font-size:13px}
+  .role{display:none}
+  .hero{min-height:0;padding-bottom:20px}
+  .cavalos{position:static;display:block;margin-top:10px;width:100%;max-width:100%}
+  .info{grid-template-columns:1fr}
+  .projetos{grid-template-columns:1fr;padding:60px 20px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

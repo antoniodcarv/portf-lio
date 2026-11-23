@@ -1,0 +1,10 @@
+COMO USAR
+1. Abra a pasta no VS Code. Instale a extensão "Live Server" e clique em "Go Live" para ver o site.
+2. As imagens em img/ foram recortadas do print do design (baixa resolução).
+   Troque pelas originais exportadas do Figma, mantendo os mesmos nomes de arquivo.
+3. Em index.html, troque o e-mail (Contact), os links de Instagram/Behance/LinkedIn e o href="#" de cada projeto.
+
+PUBLICAR NO GITHUB PAGES
+1. Crie um repositório público no GitHub e envie estes arquivos (index.html na raiz).
+2. Settings > Pages > Deploy from a branch > main / (root).
+3. Para domínio próprio: Settings > Pages > Custom domain, e aponte o DNS no registrador.
